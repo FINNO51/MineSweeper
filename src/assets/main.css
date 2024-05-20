@@ -1,0 +1,63 @@
+@import './base.css';
+
+#app {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-weight: normal;
+}
+body {
+  display: flex;
+  place-items: center;
+}
+
+a,
+.preload{
+  display: none;
+}
+.green {
+  text-decoration: none;
+  color: hsla(160, 100%, 37%, 1);
+  transition: 0.4s;
+  padding: 3px;
+}
+
+@media (hover: hover) {
+  a:hover {
+    background-color: hsla(160, 100%, 37%, 0.2);
+  }
+}
+
+@media (min-width: 1024px) {
+  body {
+    display: flex;
+    place-items: center;
+  }
+
+  #app {
+    display: flex;
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem;
+  }
+}
+
+.v-enter-active {
+  transition: all 0.5s ease;
+}
+.v-leave-active {
+  transition: all 0.5s ease;
+  
+}
+
+.v-enter-from {
+  opacity: 0;
+  transform: translateX(-100%);
+}
+.v-leave-to {
+  opacity: 0;
+  transform: translateX(100%);
+}
